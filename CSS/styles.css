@@ -1,3 +1,9 @@
-body {
-  background-color: gold;
+/* Defining color palette. Remember to commit to git respository if there's any update*/
+:root {
+  /* use of "root" pseudo class selector which matches the HTML element to define our global variables or custom properties */
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
 }
