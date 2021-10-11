@@ -53,7 +53,7 @@ p {
   margin-top: 0;
 }
 
-/* a media query for screens that are larger than 1024 pixels */
+/* a media query is used to adapt to screens that are larger than 1024 pixels */
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -160,7 +160,7 @@ a {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width 1024px) {
+@media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
   }
@@ -248,6 +248,27 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Inputs */
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0; /* Just in case chrome add outline border in older versions */
+  padding: 1.5rem 3.5rem;
+  text-align: center;
+}
+
+::placeholder {
+  color: #cdcbd7;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
