@@ -177,21 +177,34 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 /* single hyphen is used here as this is not a variation or a modifier for the icon class.
 This is entirely a new class. In BEM, use a single hyphen to separate multiple words */
 .icon-container {
   background: #f3f9fa;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   /* NOTE: width and height has no effect on inline elements (e.g. span) */
   display: inline-flex; /*NOT block, so there is no linebreak. However, icon is not in the center, so need to use inline-flex */
   justify-content: center; /* horizontal */
   align-items: center; /* vertical */
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 .btn {
@@ -459,5 +472,56 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 
   .quote__organization {
     font-size: 1.6rem;
+  }
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr; /* or code as repeat(2, 1fr) */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial */
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+  /* we are targeting image that is directly inside this container. 
+     So, we are using direct child selector*/
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    /* Once again, we see the benefit of BEM convention. We could cleary see the component 
+    and the elements  */
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }
