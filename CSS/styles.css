@@ -38,6 +38,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -220,11 +221,19 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0; /* adding vertical margin to separate button from other elements */
+  outline: 0; /* This is to prevent chrome from adding outline after clicking in older versions */
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
-  white-space: nowrap; /* When in limited space, the text in button 
-  doesn't wrap on to the 2nd line */
+  white-space: nowrap; /* When in limited space, the text in button doesn't wrap on to the 2nd line */
+}
+
+.btn .icon {
+  /* In plain words: inside button, the widht of icon would be 2rem, height 2rem*/
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -286,10 +295,10 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
   color: var(--color-headings);
-  font-size: 2.5rem;
+  font-size: 2rem;
   outline: 0; /* Just in case chrome add outline border in older versions */
   padding: 1.5rem 3.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 ::placeholder {
@@ -305,6 +314,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 .input-group .input {
   border: 0;
   flex-grow: 1;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -493,7 +503,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
-    grid-template-columns: 1fr 1fr; /* or code as repeat(2, 1fr) */
+    grid-template-columns: repeat(2, 1fr); /* or code as repeat(2, 1fr) */
   }
 }
 
@@ -571,11 +581,9 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
-
   .callout__content {
     text-align: left;
   }
-
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
@@ -726,4 +734,64 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   .nav__item {
     border: 0;
   }
+}
+
+/* Hero */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem; /* Top and Bottom only */
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/* Domain block */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin-top: 4rem;
+}
+
+.blcok-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem); /* 6rem gives height to each row */
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  /* In plain enlgish: We are writing media query for screens wider than 768px */
+  .blcok-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px));
+  }
+}
+
+/* Responsive Full-cover background image */
+.background-image {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("../images/background_image.webp");
+  background-repeat: no-repeat;
 }
