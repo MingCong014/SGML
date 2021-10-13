@@ -115,7 +115,8 @@ a {
   white-space: nowrap; /* so that it won't go to the 2nd line in limited space */
 }
 
-/* using block element modifier. -- seperates a block or component from modifier*/
+/* using block element modifier. -- seperates a block or component from modifier */
+/* While BEM convention __ is to seperate block or component from its element */
 .badge--primary {
   background: var(--color-primary);
   color: #fff;
@@ -172,6 +173,7 @@ a {
 }
 
 /* Icons */
+
 .icon {
   width: 40px;
   height: 40px;
@@ -186,18 +188,17 @@ a {
   fill: var(--color-primary);
 }
 
-.icon--white {
-  fill: #fff;
+.icon--black {
+  fill: #000;
 }
 
 /* single hyphen is used here as this is not a variation or a modifier for the icon class.
 This is entirely a new class. In BEM, use a single hyphen to separate multiple words */
 .icon-container {
   background: #f3f9fa;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  /* NOTE: width and height has no effect on inline elements (e.g. span) */
+  width: 64px;
+  height: 64px;
+  border-radius: 100%; /* NOTE: width and height has no effect on inline elements (e.g. span) */
   display: inline-flex; /*NOT block, so there is no linebreak. However, icon is not in the center, so need to use inline-flex */
   justify-content: center; /* horizontal */
   align-items: center; /* vertical */
@@ -207,6 +208,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   background: var(--color-accent);
 }
 
+/* Buttons */
 .btn {
   border-radius: 40px;
   border: 0;
@@ -562,16 +564,52 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 }
 
 @media screen and (min-width: 768px) {
-.callout .grid--1x2{
-  grid-template-columns: 1fr auto;
-}
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
 
   .callout__content {
     text-align: left;
   }
 
-  .callout .btn{
+  .callout .btn {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* Collapsibles */
+
+/* We are not apply width to collapsible, so that it could adapt to different containers.  
+   Width is determined by the container */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between; /* This will push the items to the edges of the container and add space between them */
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity:0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(90deg);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
