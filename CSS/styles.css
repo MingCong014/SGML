@@ -188,6 +188,10 @@ a {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: #fff;
+}
+
 .icon--black {
   fill: #000;
 }
@@ -619,7 +623,10 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   /* We are defining a variable in this particular element. It will be available for this block and all its children */
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  border: 2px solid red; /* temporary for easier visual */
+  /* Could use border: 2px solid red; for temporary visual reference*/
+}
+
+.block__header {
   text-align: center;
 }
 
@@ -647,5 +654,76 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
- 
+}
+
+.container {
+  /* a reusable class, got nothing to do with blocks, we can use it anywhere you want apply this constrain */
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+.nav {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+  /* We are using direct child selector here to target anchor inside nav__item 
+     There is no need to assign this element an individual class like nav__link.
+     We could do that, but it's literally impossible that we are going to replace anchor
+     with another element. We should always have anchors on a navigation bar.
+  */
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+/* using double class selector: no space in between. We are selecting an element that has both
+   the nav class and collapsible--expanded*/
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #ccc; /* horizontal, vertical offset; shadow softer; spread; color*/
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
 }
