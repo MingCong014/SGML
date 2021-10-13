@@ -601,7 +601,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
-  opacity:0;
+  opacity: 0;
   transition: all 0.3s;
 }
 
@@ -612,4 +612,40 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+}
+
+/* blocks */
+.block {
+  /* We are defining a variable in this particular element. It will be available for this block and all its children */
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+  border: 2px solid red; /* temporary for easier visual */
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  /* So, I dont have to remember to adjust for skewed block */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  /* each 2 no. represent a poiny: x and y offset */
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+ 
 }
