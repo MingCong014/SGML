@@ -362,8 +362,17 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
 .card--secondary .badge--secondary {
   background: #02cdf1;
+}
+
+/* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
 }
 
 .plan__name {
@@ -396,6 +405,10 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -407,8 +420,15 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   display: inline-block; /* This is an inline element, so need to set to inline-block for width to work */
   position: absolute; /* This means we should make the parent or the container (card__header),
                          a relatively positioned element */
-  top: -2px;
+  top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -766,23 +786,36 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
-  margin-top: 4rem;
+  margin: 4rem auto;
+  max-width: 670px;
 }
 
-.blcok-domain__prices {
+.block-domain__prices {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 6rem); /* 6rem gives height to each row */
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   /* In plain enlgish: We are writing media query for screens wider than 768px */
-  .blcok-domain__prices {
-    grid-template-columns: repeat(auto-fit, minmax(100px));
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* Responsive Full-cover background image */
