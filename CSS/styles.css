@@ -1,4 +1,4 @@
-/* Defining color palette; Remember to commit to git respository if there's any update*/
+/* Defining color palette Remember to commit to git respository if there's any update*/
 :root {
   /* use of "root" pseudo class selector which matches the
   HTML element to define our global variables or custom properties */
@@ -656,6 +656,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -847,4 +848,31 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+}
+
+.banner {
+  background: yellowgreen;
+}
+
+.banner__text {
+  color: #fff;
+  flex-grow: 1;
+  line-height: 1.4;
+}
+
+.banner__content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.banner__positon {
+  display: flex;
+  align-items: center;
+}
+
+.banner__close {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
