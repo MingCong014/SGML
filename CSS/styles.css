@@ -1,4 +1,4 @@
-/* Defining color palette. Remember to commit to git respository if there's any update*/
+/* Defining color palette; Remember to commit to git respository if there's any update*/
 :root {
   /* use of "root" pseudo class selector which matches the
   HTML element to define our global variables or custom properties */
@@ -85,7 +85,7 @@ a {
 .link-arrow {
   color: var(--color-accent);
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -818,6 +818,20 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   margin: 0 auto;
 }
 
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 8rem 0;
+}
+
+.feature__heading {
+  margin: 2rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
 /* Responsive Full-cover background image */
 .background-image {
   height: 100vh;
@@ -827,4 +841,10 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   background-position: 50% 50%;
   background-image: url("../images/background_image.webp");
   background-repeat: no-repeat;
+}
+
+.btn-plan-adjustment {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
