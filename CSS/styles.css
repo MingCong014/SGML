@@ -218,14 +218,20 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   border-radius: 40px;
   border: 0;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 600;
   margin: 1rem 0; /* adding vertical margin to separate button from other elements */
   outline: 0; /* This is to prevent chrome from adding outline after clicking in older versions */
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap; /* When in limited space, the text in button doesn't wrap on to the 2nd line */
+}
+
+.btn--small {
+  font-size: 1.1rem;
+  margin: auto;
+  padding: 0.5rem 1rem;
 }
 
 .btn .icon {
@@ -266,6 +272,11 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 .btn--stretched {
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+.btn--top {
+  display: flex;
+  justify-self: end;
 }
 
 .btn--block {
@@ -321,6 +332,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -663,6 +675,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 .block__header {
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 0;
 }
 
 .block__heading {
@@ -711,6 +724,33 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   flex-wrap: wrap;
   padding: 0 1rem;
   align-items: center;
+}
+
+nav.active {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0rem;
+  align-items: center;
+}
+
+.nav.transparent {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.nav-fixed {
+  height: auto;
+  background: #262626;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  margin-top: auto;
 }
 
 .nav__list {
@@ -776,9 +816,9 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 
 .hero__tagline {
   font-size: 2rem;
-  color: #b9c3cf;
+  color: #fff;
   letter-spacing: 1px;
-  margin: 2rem 0 5rem; /* Top and Bottom only */
+  margin: 1rem 0 1rem 10rem; /* Top and Bottom only */
 }
 
 .hero__image {
@@ -804,20 +844,25 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 6rem); /* 6rem gives height to each row */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 6rem); /* 6rem gives height to each row */
   font-size: 2rem;
   font-weight: 600;
-  justify-items: center;
   max-width: 700px;
+  justify-items: center;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   /* In plain enlgish: We are writing media query for screens wider than 768px */
   .block-domain__prices {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
+  }
+
+  .block-adjustment {
+    margin-bottom: 0;
   }
 }
 
@@ -845,15 +890,15 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   width: 100%;
 }
 
-/* Responsive Full-cover background image */
+/* /* Responsive Full-cover background image* */
 .background-image {
   height: 100vh;
-  width: 100vw;
-  position: relative;
+  width: 100%;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("../images/background_image.webp");
+  background-image: url("../images/backgd.webp");
   background-repeat: no-repeat;
+  position: relative;
 }
 
 /* Banner */
@@ -865,6 +910,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   color: #fff;
   flex-grow: 1;
   line-height: 1.4;
+  padding-left: 2rem;
 }
 
 .banner__content {
@@ -959,4 +1005,21 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+.clearmargin {
+  margin-top: 0;
+}
+
+/* Overlay for content on landing page */
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 5rem;
+  background: transparent;
+  z-index: 1;
+}
+
+.layer {
+  z-index: 2;
 }
