@@ -31,12 +31,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" type="image/png" href="images/logo-favicon-16x16.png">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
+    <!-- Start of landing section -->
     <!-- Start of License no. -->
     <div class="banner">
       <div class="banner__content">
@@ -52,7 +54,6 @@
     </div>
 
     <!-- Start of Navigation Bar -->
-
     <section class="layer">
       <nav class="nav nav-fixed collapsible">
         <a href="/"><img src="images/logoV12-50x200.png" alt="logo" /></a>
@@ -60,14 +61,12 @@
           <use xlink:href="images/sprite.svg#menu"></use>
         </svg>
         <ul class="list nav__list collapsible__content">
-          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="index.html">Home</a></li>
           <li class="nav__item"><a href="#">Loans</a></li>
           <li class="nav__item"><a href="#">About Us</a></li>
           <li class="nav__item"><a href="#">Blog</a></li>
           <li class="nav__item">
-            <a href="#"
-              ><button class="btn btn--primary btn--small">Apply Now</button></a
-            >
+            <a href="#"><button class="btn btn--primary btn--small">Apply Now</button></a>
           </li>
         </ul>
       </nav>
@@ -75,16 +74,20 @@
 
     <!-- Start of Overlay on landing image -->
     <section class="block block--dark overlay">
-      <div class="container grid grid--1x2">
+      <div class="container--top grid grid--1x4">
         <header class="block__header hero__content">
           <!--ORDER is Impt: Generic class 1st: block__header, then specilised classes: hero__content to override generic classes -->
           <h1 class="block__heading">Breaking Through Tough Tides With You</h1>
         </header>
-
+        <div><!-- Empty div to take up middle grid space 2 --></div>
+        <div><!-- Empty div to take up middle grid space 3 --></div>
         <div>
-          <a href="#" class="btn btn--accent btn--block btn--top">Apply Now</a>
-          <p class="hero__tagline">
-            Loan under 5 mins & Risk Free with 3-Day Cool Down Policy
+          <a href="#" class="btn btn--accent btn--block btn--top top-mobile"
+            >Apply Now</a
+          >
+          <p class="hero__tagline top-mobile">
+            Super <strong>FAST</strong>, <strong>EASY</strong> &
+            <strong>RISK-FREE</strong> Loans under 5-mins.
           </p>
         </div>
       </div>
@@ -94,12 +97,47 @@
     <section>
       <div class="background-image"></div>
     </section>
+    <!-- End of landing section -->
+
+    <!-- Start of Why choose us -->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <img
+            class="feature__image"
+            src="../images/fast_illustration.webp"
+            alt=""
+          />
+        </div>
+        <div class="feature__content">
+          <header>
+            <h3 class="feature__heading">
+              Singapore's MOST Customer-Centric Licensed Money Lender
+            </h3>
+            <h4 class="feature__heading">
+              SUPER Fast & Easy, Low Interest, Risk-Free.
+            </h4>
+          </header>
+          <p>
+            We understand your needs, hence we are providing SUPER Fast, Low
+            Interest and Risk-Free Loans. If you change your mind within the
+            <u>3-day "Cool-Down" period</u>, you could CANCEL or CHANGE a plan
+            at <strong>$0 Charges</strong>.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="#" class="btn btn--secondary btn--stretched">Apply Now</a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- End of Why choose us -->
 
     <!-- Start of Input Loan value and search -->
     <section class="block container block-domain block-adjustment">
       <header data-aos="fade-up" class="block__header">
         <h2>Find My BEST Loans</h2>
-        <p>RISK Free — LOWEST Interest — CUSTOMIZED to my Need</p>
+        <p>RISK Free — LOWEST Interest — CUSTOMIZED to my need</p>
       </header>
       <div class="input-group">
         <input
@@ -128,7 +166,6 @@
     </section>
 
     <!-- Start of loan types -->
-
     <!-- Start of Personal Loan-->
     <section class="block container clearmargin">
       <header class="block__header">
@@ -368,6 +405,137 @@
       </article>
     </section>
     <!-- End of section EIGHT -->
+    <!-- End of loan type -->
+
+    <!-- Start of Testimonial -->
+    <section class="block">
+      <header class="block__header">
+        <h2>What our Customers are Saying</h2>
+        <p>The MOST reliable and cost-friendly Loans</p>
+      </header>
+      <div class="container">
+        <!--container used to contrain content -->
+        <div class="card testimonial">
+          <div class="grid grid--1x2">
+            <div class="testimonial__image">
+              <img src="images/cudy.webp" alt="A happily smiling customer" />
+              <span class="icon-container icon-container--accent">
+                <svg class="icon icon--white icon--small">
+                  <use xlink:href="images/sprite.svg#quotes"></use>
+                </svg>
+              </span>
+            </div>
+            <blockquote class="quote">
+              <p class="quote__text">
+                We have a brilliant idea, we have the right people, right tools
+                and right market time. The only thing that was stopping us was
+                the initial fund that we need urgently and cost-friendly. SG
+                Money Lender is our ENABLER that offers customized loan plan
+                that suits our need perfectly.
+              </p>
+              <footer>
+                <div class="media">
+                  <div class="media__image">
+                    <svg class="icon icon--primary quote__line">
+                      <use xlink:href="images/sprite.svg#line"></use>
+                    </svg>
+                  </div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">Alex & Eric</h3>
+                    <p class="quote__organization">Cudy Pte Ltd</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Testimonial -->
+
+    <!-- Start of callout -->
+    <div class="container callout callout--primary">
+      <div class="grid grid--1x2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Ready to Apply?</h2>
+          <p>
+            We have the right plans for your unique needs at one of the LOWEST
+            interst rates. If your situation changes, you may also change or
+            cancel a plan within 3 days for FREE.
+          </p>
+        </div>
+        <a href="#" class="btn btn--secondary btn--stretched">Apply Now</a>
+      </div>
+    </div>
+
+    <!-- End of callout -->
+
+    <!-- Start of footer -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Loan Services</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Personal Loans</a></li>
+              <li><a href="#">Business Loans</a></li>
+              <li><a href="#">Wedding Loans</a></li>
+              <li><a href="#">Education Loans</a></li>
+              <li><a href="#">Medical Loans</a></li>
+              <li><a href="#">Renonation Loans</a></li>
+              <li><a href="#">Vacation Loans</a></li>
+              <li><a href="#">Foreigner Loans</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section ONE -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">COMPANY</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section TWO -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">SUPPORT</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section Three -->
+        <div class="footer__brand">
+          <img src="images/logoV12-50x200.png" alt="logo" />
+          <p class="footer__copyright">
+            Copyright &copy; 2021 SG MONEY LENDER. All Rights Reserved. Licence
+            No. XX/2021
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of footer -->
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

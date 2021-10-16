@@ -229,7 +229,7 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 }
 
 .btn--small {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin: auto;
   padding: 0.5rem 1rem;
 }
@@ -270,15 +270,18 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
 }
 
 .btn--stretched {
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .btn--top {
+  margin-top: 30rem;
   display: flex;
   justify-self: end;
 }
 
+
+}
 .btn--block {
   width: 100%;
   display: inline-block;
@@ -551,6 +554,14 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .grid--1x4 {
+    grid-template-columns: repeat(4, 35% 20% 20% 30%);
+  }
+}
+
+
+
 /* Testimonial */
 .testimonial {
   padding: 3rem;
@@ -716,6 +727,11 @@ This is entirely a new class. In BEM, use a single hyphen to separate multiple w
   margin: 0 auto;
 }
 
+.container--top{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Navigation */
 .nav {
   background: #000;
@@ -818,7 +834,7 @@ nav.active {
   font-size: 2rem;
   color: #fff;
   letter-spacing: 1px;
-  margin: 1rem 0 1rem 10rem; /* Top and Bottom only */
+  margin: 1rem 0 1rem 1rem; /* Top and Bottom only */
 }
 
 .hero__image {
@@ -829,6 +845,7 @@ nav.active {
   .hero {
     padding-top: 0;
   }
+
   .hero__content {
     text-align: left;
     align-self: center;
@@ -1014,12 +1031,23 @@ nav.active {
 /* Overlay for content on landing page */
 .overlay {
   position: absolute;
-  bottom: 20px;
-  left: 5rem;
+  top: 15rem;
+  
   background: transparent;
   z-index: 1;
+  width: 100%;
 }
 
 .layer {
   z-index: 2;
+}
+
+.top-mobile {
+  display: none;
+}
+
+@media screen and (min-width:1200px) {
+  .top-mobile {
+    display:block;
+  }
 }
