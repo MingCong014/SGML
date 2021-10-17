@@ -16,15 +16,15 @@
       name="description"
       content="Super fast and easy loan in 5 mins. Lowest interest & risk free with 3-day loan cancellation period under Cool-Down Policy only available in SG MONEY LENDER."
     />
-    <meta property="og:title" content="SG Money Lender" />
+    <meta property="og:title" content="SG Money Lender. Apply Loan" />
     <meta
       property="og:description"
-      content="Super fast and easy loan in 5 mins. Lowest interest & Risk Free."
+      content="Super fast and easy personal loan in 5 mins. Lowest interest & Risk Free."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://" />
     <meta property="og:url" content="https://bestsgmoneylender.com" />
-    <title>SG Money Lender - Super fast and easy loans</title>
+    <title>SG Money Lender - Apply Loans</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,8 +42,10 @@
   </head>
 
   <body>
-    <!-- Start of Navigation Bar -->
-    <section class="layer">
+    <!-- Start of landing section -->
+
+    <!-- Start of Application Form -->
+    <section>
       <nav class="nav nav-fixed collapsible">
         <a href="/"><img src="images/logoV12-50x200.png" alt="logo" /></a>
         <svg class="icon icon--white nav__toggler">
@@ -62,11 +64,152 @@
         </ul>
       </nav>
     </section>
-    <!-- End of Navigation Bar -->
 
-    <!-- Start of input field -->
+    <section class="clear-style apply-style">
+      <div class="apply-container">
+        <div class="space-filler"></div>
+        <div class="apply-content">
+          <div class="image-box">
+            <img src="../images/happy-illustration.webp" alt="" />
+          </div>
 
-    <!-- End of input field -->
+          <form action="#">
+            <div class="topic"><h2>Application in 5 Mins</h2></div>
+
+            <!-- start of purpose of loan:drop-down list -->
+            <h3>Loan Plans:</h3>
+            <div class="select-box">
+              <div class="options-container">
+                <div class="selected">Select Plan</div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="personal"
+                    name="plans"
+                  />
+                  <label for="personal">Personal Loan</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="business"
+                    name="plans"
+                  />
+                  <label for="business">Business Loan</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="wedding" name="plans" />
+                  <label for="wedding">Wedding Loan</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="education"
+                    name="plans"
+                  />
+                  <label for="education">Education Loan</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="medical" name="plans" />
+                  <label for="medical">Medical Loan</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="renovation"
+                    name="plans"
+                  />
+                  <label for="renovation">Renonation Loan</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="vacation"
+                    name="plans"
+                  />
+                  <label for="vacation">Vacation Loan</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="foreigner"
+                    name="plans"
+                  />
+                  <label for="foreigner">Foreigner Loan</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- end of purpose of loan:drop-down list -->
+            <!-- name -->
+            <div class="input-box">
+              <input type="text" required />
+              <label>Enter my name</label>
+            </div>
+
+            <!-- monthly income -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my monthly income</label>
+            </div>
+
+            <!-- loan amount -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my loan amount</label>
+            </div>
+
+            <!-- duration of loan -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my loan duration</label>
+            </div>
+
+            <!-- contact number -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my contact number</label>
+            </div>
+
+            <!-- Additional message -->
+            <div class="message-box">
+              <textarea></textarea>
+              <label>Enter my message</label>
+            </div>
+
+            <!-- Submit button -->
+            <div class="input-box">
+              <input type="submit" value="Send Application" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End of section Application Form -->
+
+    <!-- Start of callout -->
+    <div class="container callout callout--primary container--bottom">
+      <div class="grid grid--1x2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Ready to Apply?</h2>
+          <p>
+            We have the right plans with wonderful combination of
+            <strong>Customization, LOWEST Interest Rates</strong> and
+            <strong>Zero-Risk</strong>.
+          </p>
+        </div>
+        <a href="apply.html" class="btn btn--secondary btn--stretched"
+          >Apply Now</a
+        >
+      </div>
+    </div>
+    <!-- End of callout -->
 
     <!-- Start of footer -->
     <footer class="block block--dark footer">
