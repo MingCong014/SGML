@@ -1079,7 +1079,6 @@ nav.active {
 }
 
 .apply-style {
- 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1223,7 +1222,7 @@ nav.active {
   border-color: var(--color-secondary);
 }
 
-.space-filler{
+.space-filler {
   height: 10rem;
 }
 
@@ -1247,4 +1246,87 @@ nav.active {
   }
 }
 
-/*  */
+/* Select plan drop-down list */
+.selection-container {
+  margin-top: 1rem;
+  padding: 3rem;
+}
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: var(--color-primary);
+  color: #fff;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: var(--color-primary);
+  border-radius: 8px;
+  margin-bottom: 4px;
+  color: #f5f6fa;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url(../images/chevron.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+  transition: all 0.3s ease;
+}
+
+.select-box .options-container.select-active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.select {
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: var(--color-secondary);
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
