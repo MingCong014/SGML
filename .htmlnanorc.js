@@ -1,3 +1,4 @@
 module.exports = {
-  minifySvg: false,
-};
+    minifySvg: false,
+  };
+  
