@@ -1,0 +1,581 @@
+<!-- 
+    This HTML is built using the bottom up approach;
+    Individual components are built in isolation first.
+    These components are build and tested.
+    Then we could easily combine them to build complex pages.
+    Benefits: Minimize weird layout issues; Reduce troubleshooting complexity.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Super fast and easy loan in 5 mins. Lowest interest & risk free with 3-day loan cancellation period under Cool-Down Policy only available in SG MONEY LENDER."
+    />
+    <meta property="og:title" content="SG Money Lender" />
+    <meta
+      property="og:description"
+      content="Super fast and easy loan in 5 mins. Lowest interest & Risk Free."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://bestsgmoneylender.com" />
+    <title>SG Money Lender - Super fast and easy loans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.webp" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <!-- Start of landing section -->
+    <!-- Start of License no. -->
+    <div class="banner">
+      <div class="banner__content">
+        <div class="banner__text">
+          SG Money Lender is a <strong>licensed moneylender </strong>(License
+          No. XX/2021) listed in the Registry of Moneylenders (S/N XX), under
+          the Ministry of Law in Singapore.
+        </div>
+        <button class="banner__close" type="button">
+          <img src="images/clear_black_24dp.svg" alt="close" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Start of Navigation Bar -->
+    <section class="layer">
+      <nav class="nav nav-fixed collapsible">
+        <a href="/"><img src="images/logoV12-50x200.png" alt="logo" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="#">Loans</a></li>
+          <li class="nav__item"><a href="#">About Us</a></li>
+          <li class="nav__item"><a href="#">Blog</a></li>
+          <li class="nav__item">
+            <a href="apply.html"
+              ><button class="btn btn--primary btn--small">Apply Now</button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Start of Overlay on landing image -->
+    <section class="block block--dark overlay">
+      <div class="container--top grid grid--1x4">
+        <header class="block__header hero__content">
+          <!--ORDER is Impt: Generic class 1st: block__header, then specilised classes: hero__content to override generic classes -->
+          <h1 class="block__heading">Breaking Through Tough Tides With You</h1>
+        </header>
+        <div><!-- Empty div to take up middle grid space 2 --></div>
+        <div><!-- Empty div to take up middle grid space 3 --></div>
+        <div>
+          <a
+            href="apply.html"
+            class="btn btn--accent btn--block btn--top top-mobile"
+            >Apply Now</a
+          >
+          <p class="hero__tagline top-mobile">
+            Super <strong>FAST</strong>, <strong>EASY</strong> &
+            <strong>RISK-FREE</strong> Loans under 5-mins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Start of Landing Background Image -->
+    <section>
+      <div class="background-image"></div>
+    </section>
+    <!-- End of landing section -->
+
+    <!-- Start of Why choose us -->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <img
+            class="feature__image"
+            src="images/fast_illustration.webp"
+            alt=""
+          />
+        </div>
+        <div class="feature__content">
+          <header>
+            <h3 class="feature__heading">
+              Singapore's MOST Customer-Centric Licensed Money Lender
+            </h3>
+            <h4 class="feature__heading">
+              SUPER Fast & Easy, Low Interest, Risk-Free.
+            </h4>
+          </header>
+          <p>
+            We understand your needs, hence we are providing SUPER Fast, Low
+            Interest and Risk-Free Loans. If you change your mind within the
+            <u>3-day "Cool-Down" period</u>, you could CANCEL or CHANGE a plan
+            at <strong>$0 Charges</strong>.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- End of Why choose us -->
+
+    <!-- Start of Input Loan value and search -->
+    <section class="block container block-domain block-adjustment">
+      <header data-aos="fade-up" class="block__header">
+        <h2>Find My BEST Loans</h2>
+        <p>RISK Free — LOWEST Interest — CUSTOMIZED to my need</p>
+      </header>
+      <div class="input-group">
+        <input
+          type="text"
+          class="input"
+          placeholder="Enter My Loan Value Here..."
+        />
+        <button class="btn btn--accent">
+          <svg class="icon icon--white">
+            <use href="images/sprite.svg#search"></use>
+          </svg>
+          Search
+        </button>
+      </div>
+      <ul class="list block-domain__prices">
+        <!-- class list will remove button point and left padding -->
+        <li>Personal</li>
+        <li>Business</li>
+        <li>Wedding</li>
+        <li>Education</li>
+        <li>Medical</li>
+        <li>Renonation</li>
+        <li>Vacation</li>
+        <li>Foreigner</li>
+      </ul>
+    </section>
+
+    <!-- Start of loan types -->
+    <!-- Start of Personal Loan-->
+    <section class="block container clearmargin">
+      <header class="block__header">
+        <h2>Financial Loans Available</h2>
+        <p>
+          Our financial loans could help you get through Tough Tides at
+          <strong>minimum</strong>
+          cost.
+        </p>
+      </header>
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#person"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Personal Loans</h3>
+          <p>
+            We understand that life could be tough sometimes. So, we are here to
+            give a helping hand.
+          </p>
+          <div>
+            <a href="personal.html" class="link-arrow">Learn More</a>
+          </div>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <div>
+          <img
+            data-aos="zoom-in-left"
+            class="feature__image"
+            src="images/person.webp"
+            alt=""
+          />
+        </div>
+      </article>
+    </section>
+    <!-- End of section ONE -->
+
+    <!-- Start of Business Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <img class="feature__image" src="images/business.webp" alt="" />
+        </div>
+        <div class="feature__content">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#business"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Business Loans</h3>
+          <p>
+            Businesses don’t always run smoothly, and you may just need that
+            extra fund to power it to the next level.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- End of section TWO -->
+
+    <!-- Start of Wedding Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#wedding"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Wedding Loans</h3>
+          <p>
+            Congratulations! We are glad to provide some help in building those
+            long-lasting memorable moments in your life.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <div>
+          <img
+            data-aos="zoom-in-left"
+            class="feature__image"
+            src="images/couple.webp"
+            alt=""
+          />
+        </div>
+      </article>
+    </section>
+    <!-- End of section THREE -->
+    <!-- Start of Education Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <img class="feature__image" src="images/student2.webp" alt="" />
+        </div>
+        <div class="feature__content">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#school"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Education Loans</h3>
+          <p>
+            Having a good education ensures brighter future. We could help you
+            to study with a peace of mind. No interest collected during the
+            education period.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- End of section FOUR -->
+
+    <!-- Start of Medical Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#medical"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Medical Loans</h3>
+          <p>
+            Life is full of surprises and miracles. We are here to relieve some
+            of your stresses.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <div>
+          <img
+            data-aos="zoom-in-left"
+            class="feature__image"
+            src="images/medical.jpg"
+            alt=""
+          />
+        </div>
+      </article>
+    </section>
+    <!-- End of section FIVE -->
+
+    <!-- Start of Renovation Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <img
+            class="feature__image"
+            src="images/family-renovation.webp"
+            alt=""
+          />
+        </div>
+        <div class="feature__content">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#homeReno"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Renovations packages</h3>
+          <p>
+            Productivity, fruitful journey and happy family start from a warm
+            and lovely home — sweet home comes ealier with us.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- End of section SIX -->
+
+    <!-- Start of Vacation Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#globe"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Vacation Loans</h3>
+          <p>
+            This is a wonderful world. Why don't explore it with your beloved
+            ones without any worries on budget?
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <div>
+          <img
+            data-aos="zoom-in-left"
+            class="feature__image"
+            src="images/vacation.webp"
+            alt=""
+          />
+        </div>
+      </article>
+    </section>
+    <!-- End of section SEVEN -->
+
+    <!-- Start of Foreigner Loan-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <img class="feature__image" src="images/foreigner.webp" alt="" />
+        </div>
+        <div class="feature__content">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#luggage"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Foreigner Loans</h3>
+          <p>
+            Life in a totally new environment could be tough, we are here to
+            relief some of your stresses.
+          </p>
+          <a href="" class="link-arrow">Learn More</a>
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- End of section EIGHT -->
+    <!-- End of loan type -->
+
+    <!-- Start of Testimonial -->
+    <section class="block">
+      <header class="block__header">
+        <h2>What our Customers are Saying</h2>
+        <p>The MOST reliable and cost-friendly Loans</p>
+      </header>
+      <div class="container">
+        <!--container used to contrain content -->
+        <div class="card testimonial">
+          <div class="grid grid--1x2">
+            <div class="testimonial__image">
+              <img
+                src="images/cudy.webp"
+                alt="A happily smiling customer taking business loan"
+              />
+              <span class="icon-container icon-container--accent">
+                <svg class="icon icon--white icon--small">
+                  <use href="images/sprite.svg#quotes"></use>
+                </svg>
+              </span>
+            </div>
+            <blockquote class="quote">
+              <p class="quote__text">
+                We have a brilliant idea, we have the right people, right tools
+                and right market time. <br />
+
+                The only thing that was stopping us was the initial fund that we
+                need urgently and cost-friendly. <br />
+
+                SG Money Lender is our ENABLER that offers customized loan plan
+                that suits our need perfectly.
+              </p>
+              <footer>
+                <div class="media">
+                  <div class="media__image">
+                    <svg class="icon icon--primary quote__line">
+                      <use href="images/sprite.svg#line"></use>
+                    </svg>
+                  </div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">Alex & Eric</h3>
+                    <p class="quote__organization">Cudy Pte Ltd</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Testimonial -->
+
+    <!-- Start of callout -->
+    <div class="container callout callout--primary container--bottom">
+      <div class="grid grid--1x2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Ready to Apply?</h2>
+          <p>
+            We have the right plans for your unique needs at one of the LOWEST
+            interst rates. If your situation changes, you may also change or
+            cancel a plan within 3 days for FREE.
+          </p>
+        </div>
+        <a href="apply.html" class="btn btn--secondary btn--stretched"
+          >Apply Now</a
+        >
+      </div>
+    </div>
+
+    <!-- End of callout -->
+
+    <!-- Start of footer -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Loan Services</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="personal.html">Personal</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Wedding</a></li>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Medical</a></li>
+              <li><a href="#">Renonation</a></li>
+              <li><a href="#">Vacation</a></li>
+              <li><a href="#">Foreigner</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section ONE -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">COMPANY</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section TWO -->
+        <section class="collapsible footer__section">
+          <!-- footer__sections and footer__section are different -->
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">SUPPORT</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section Three -->
+
+        <!-- Start of Company Copyright -->
+        <div class="footer__brand">
+          <img src="images/logoV12-50x200.png" alt="logo" />
+          <p class="footer__copyright">
+            Copyright &copy; 2021 SG MONEY LENDER. All Rights Reserved. Licence
+            No. XX/2021
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of footer -->
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

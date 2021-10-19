@@ -1,0 +1,441 @@
+<!-- 
+    This HTML is built using the bottom up approach;
+    Individual components are built in isolation first.
+    These components are build and tested.
+    Then we could easily combine them to build complex pages.
+    Benefits: Minimize weird layout issues; Reduce troubleshooting complexity.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Super fast and easy loan in 5 mins. Lowest interest & risk free with 3-day loan cancellation period under Cool-Down Policy only available in SG MONEY LENDER."
+    />
+    <meta property="og:title" content="SG Money Lender. Personal Loan" />
+    <meta
+      property="og:description"
+      content="Super fast and easy personal loan in 5 mins. Lowest interest & Risk Free."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://bestsgmoneylender.com" />
+    <title>SG Money Lender - Personal Loans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.webp" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <!-- Start of landing section -->
+
+    <!-- Start of Navigation Bar -->
+    <section class="layer">
+      <nav class="nav nav-fixed collapsible">
+        <a href="/"><img src="images/logoV12-50x200.png" alt="logo" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="#">Loans</a></li>
+          <li class="nav__item"><a href="#">About Us</a></li>
+          <li class="nav__item"><a href="#">Blog</a></li>
+          <li class="nav__item">
+            <a href="apply.html">
+              <button class="btn btn--primary btn--small">Apply Now</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Start of Hero -->
+    <section class="block block--light block--skewed-left hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content">
+          <!--ORDER is Impt: Generic class 1st: block__header, then specilised classes: hero__content to override generic classes -->
+          <h1 class="block__heading block__personal">
+            With our personal loan,
+          </h1>
+          <h2 class="block__heading">You will enjoy a Peace of Mind.</h2>
+          <p class="hero__tagline hero-font">
+            Personalised Loan in 5 min. Super EASY, FAST and RELIABLE.
+          </p>
+          <a href="apply.html" class="btn btn--accent btn--stretched"
+            >Apply Now</a
+          >
+        </header>
+        <picture>
+          <img
+            class="hero__image"
+            src="images/personal-loan-graphic.webp"
+            alt=""
+          />
+        </picture>
+      </div>
+    </section>
+
+    <!-- Start of Plans block -->
+    <section class="block container block-plans">
+      <div class="grid grid--1x3">
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">6-Month</h3>
+              <span class="plan__price">0.35%</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small">20% OFF</span>
+              <span class="plan__description">
+                Easy Loan at Lightning Speed.
+              </span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Super Fast & Easy</li>
+                <li class="list__item">Up 100k or 6x Month Salary</li>
+                <li class="list__item">0.5% Processing Fee</li>
+                <li class="list__item">3-Day "Cool-Down" Policy</li>
+              </ul>
+              <a href="apply.html">
+                <button class="btn btn--outline btn--block">Apply Now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End of first card -->
+
+        <div class="plan plan--popular">
+          <div class="card card--primary">
+            <header class="card__header">
+              <h3 class="plan__name">1-Year</h3>
+              <span class="plan__price">2.88%</span>
+              <span class="plan__billing-cycle">/year</span>
+              <span class="badge badge--primary badge--small"
+                >$0 Process Fee</span
+              >
+              <span class="plan__description"> Most Cost-Effective Plan. </span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Super Fast & Easy</li>
+                <li class="list__item">Up 100k or 8x Month Salary</li>
+                <li class="list__item">Lowest Interest</li>
+                <li class="list__item">3-Day "Cool-Down" Policy</li>
+              </ul>
+              <a href="apply.html">
+                <button class="btn btn--outline btn--block">Apply Now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End of second card -->
+
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">3-Year</h3>
+              <span class="plan__price">2.38%</span>
+              <span class="plan__billing-cycle">/year</span>
+              <span class="badge badge--secondary badge--small">10% OFF</span>
+              <span class="plan__description"> Longer Time, Less Stress. </span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Super Fast & Easy</li>
+                <li class="list__item">Up 300k or 12x Month Salary</li>
+                <li class="list__item">Low Interest</li>
+                <li class="list__item">3-Day "Cool-Down" Policy</li>
+              </ul>
+              <a href="apply.html">
+                <button class="btn btn--outline btn--block">Apply Now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- End of third card -->
+      </div>
+      <div class="customized-plan">
+        <p>
+          <a href="#"><u>More Customized Plans Available</u></a>
+        </p>
+      </div>
+    </section>
+    <!-- Plans block End -->
+
+    <!-- Start of Testimonial -->
+    <section class="block">
+      <header class="block__header">
+        <h2>What our Customers are Saying</h2>
+        <p>Dream Enabler — Power My Dreams in difficult times.</p>
+      </header>
+      <div class="container">
+        <!--container used to contrain content -->
+        <div class="card testimonial">
+          <div class="grid grid--1x2">
+            <div class="testimonial__image">
+              <img
+                src="images/personal-loan.webp"
+                alt="A happily smiling customer taking personal loan"
+              />
+              <span class="icon-container icon-container--accent">
+                <svg class="icon icon--white icon--small">
+                  <use href="images/sprite.svg#quotes"></use>
+                </svg>
+              </span>
+            </div>
+            <blockquote class="quote">
+              <p class="quote__text">
+                I always wanted to work as an english calligraphy designer.<br />
+                At the beginning, there was not enough customers and revenue to
+                support myself a living.<br />
+                Life was a struggle back then.<br />
+                Thanks to SG Money Lender's personal loan which was my
+                dream-saver to support me during the initial difficult
+                situations.
+              </p>
+              <footer>
+                <div class="media">
+                  <div class="media__image">
+                    <svg class="icon icon--primary quote__line">
+                      <use href="images/sprite.svg#line"></use>
+                    </svg>
+                  </div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">Chloe</h3>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Testimonial -->
+
+    <!-- Start of Youtube Video Embed -->
+    <!-- Start of What is Personal Loan video-->
+    <!-- Video One -->
+    <section class="block container clearmargin">
+      <header class="block__header">
+        <h2>What is Personal Loan & How to Find My Best Plan</h2>
+        <p>
+          Our Financial Loans are <strong>Customer-Centric</strong> — we will
+          ensure you in getting the <strong>BEST plans</strong>.
+        </p>
+      </header>
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#person"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Personal Loans</h3>
+          <p>
+            We understand that life could be tough sometimes. So, we are here to
+            give a helping hand.
+          </p>
+
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/P1ph_9qdj_w"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </article>
+    </section>
+    <!-- End of Video ONE -->
+
+    <!-- Video TWO-->
+
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/QtS3N1rb3vU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="feature__content" data-aos="fade-left">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#person"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Personal Loans</h3>
+          <p>
+            With us, you could have a peace of mind in drastic life changes.
+            <br />
+            We will hold your hands <strong>tight & strong</strong> to get
+            through them at minimum cost.
+          </p>
+
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- End of Video TWO -->
+
+    <!-- Start of video THREE-->
+    <section class="block container">
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--black">
+              <use href="images/sprite.svg#person"></use>
+            </svg>
+          </span>
+          <h3 class="feature__heading">Personal Loans</h3>
+          <p>
+            We believe in People and We will hold our integrity HIGH.
+            <strong>No Hidden Charges</strong> and all fees are transparent.
+          </p>
+
+          <div class="btn-plan-adjustment">
+            <a href="apply.html" class="btn btn--secondary btn--stretched"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8PJGkrEUhkw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </article>
+    </section>
+    <!-- End of video THREE -->
+    <!-- End of Youtube Embed -->
+
+    <!-- Start of callout -->
+    <div class="container callout callout--primary container--bottom">
+      <div class="grid grid--1x2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Ready to Apply?</h2>
+          <p>
+            We have the right plans with wonderful combination of
+            <strong>Customization, LOWEST Interest Rates</strong> and
+            <strong>Zero-Risk</strong>.
+          </p>
+        </div>
+        <a href="apply.html" class="btn btn--secondary btn--stretched"
+          >Apply Now</a
+        >
+      </div>
+    </div>
+    <!-- End of callout -->
+
+    <!-- Start of footer -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Loan Services</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Personal Loans</a></li>
+              <li><a href="#">Business Loans</a></li>
+              <li><a href="#">Wedding Loans</a></li>
+              <li><a href="#">Education Loans</a></li>
+              <li><a href="#">Medical Loans</a></li>
+              <li><a href="#">Renonation Loans</a></li>
+              <li><a href="#">Vacation Loans</a></li>
+              <li><a href="#">Foreigner Loans</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section ONE -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">COMPANY</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section TWO -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">SUPPORT</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section Three -->
+        <div class="footer__brand">
+          <img src="images/logoV12-50x200.png" alt="logo" />
+          <p class="footer__copyright">
+            Copyright &copy; 2021 SG MONEY LENDER. All Rights Reserved. Licence
+            No. XX/2021
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of footer -->
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

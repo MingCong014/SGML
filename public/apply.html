@@ -1,0 +1,277 @@
+<!-- 
+    This HTML is built using the bottom up approach;
+    Individual components are built in isolation first.
+    These components are build and tested.
+    Then we could easily combine them to build complex pages.
+    Benefits: Minimize weird layout issues; Reduce troubleshooting complexity.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Super fast and easy loan in 5 mins. Lowest interest & risk free with 3-day loan cancellation period under Cool-Down Policy only available in SG MONEY LENDER."
+    />
+    <meta property="og:title" content="SG Money Lender. Apply Loan" />
+    <meta
+      property="og:description"
+      content="Super fast and easy personal loan in 5 mins. Lowest interest & Risk Free."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://bestsgmoneylender.com" />
+    <title>SG Money Lender - Apply Loans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.webp" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <!-- Start of landing section -->
+
+    <!-- Start of Application Form -->
+    <section>
+      <nav class="nav nav-fixed collapsible">
+        <a href="/"><img src="images/logoV12-50x200.png" alt="logo" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="#">Loans</a></li>
+          <li class="nav__item"><a href="#">About Us</a></li>
+          <li class="nav__item"><a href="#">Blog</a></li>
+          <li class="nav__item">
+            <a href="apply.html">
+              <button class="btn btn--primary btn--small">Apply Now</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="clear-style apply-style">
+      <div class="apply-container">
+        <div class="space-filler"></div>
+        <div class="apply-content">
+          <div class="image-box">
+            <img src="images/happy-illustration.webp" alt="" />
+          </div>
+
+          <form action="#">
+            <div class="topic"><h2>Application in 5 Mins</h2></div>
+
+            <!-- start of purpose of loan:drop-down list -->
+            <div class="selection-container">
+              <h3>My Loan Plans:</h3>
+              <div class="select-box">
+                <div class="options-container">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="personal"
+                      name="plans"
+                    />
+                    <label for="personal">Personal Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="business"
+                      name="plans"
+                    />
+                    <label for="business">Business Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="wedding"
+                      name="plans"
+                    />
+                    <label for="wedding">Wedding Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="education"
+                      name="plans"
+                    />
+                    <label for="education">Education Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="medical"
+                      name="plans"
+                    />
+                    <label for="medical">Medical Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="renovation"
+                      name="plans"
+                    />
+                    <label for="renovation">Renonation Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="vacation"
+                      name="plans"
+                    />
+                    <label for="vacation">Vacation Loan</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="foreigner"
+                      name="plans"
+                    />
+                    <label for="foreigner">Foreigner Loan</label>
+                  </div>
+                </div>
+                <div class="selected">Select My Loan Plan</div>
+              </div>
+            </div>
+
+            <!-- end of purpose of loan:drop-down list -->
+            <!-- name -->
+            <div class="input-box">
+              <input type="text" required />
+              <label>Enter my name</label>
+            </div>
+
+            <!-- monthly income -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my monthly income</label>
+            </div>
+
+            <!-- loan amount -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my loan amount</label>
+            </div>
+
+            <!-- duration of loan -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my loan duration</label>
+            </div>
+
+            <!-- contact number -->
+            <div class="input-box">
+              <input type="number" required />
+              <label>Enter my contact number</label>
+            </div>
+
+            <!-- Additional message -->
+            <div class="message-box">
+              <textarea></textarea>
+              <label>Enter my message</label>
+            </div>
+
+            <!-- Submit button -->
+            <div class="input-box">
+              <input type="submit" value="Send Application" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End of section Application Form -->
+
+    <!-- Start of footer -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Loan Services</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="personal.html">Personal Loans</a></li>
+              <li><a href="#">Business Loans</a></li>
+              <li><a href="#">Wedding Loans</a></li>
+              <li><a href="#">Education Loans</a></li>
+              <li><a href="#">Medical Loans</a></li>
+              <li><a href="#">Renonation Loans</a></li>
+              <li><a href="#">Vacation Loans</a></li>
+              <li><a href="#">Foreigner Loans</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section ONE -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">COMPANY</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section TWO -->
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">SUPPORT</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of Section Three -->
+        <div class="footer__brand">
+          <img src="images/logoV12-50x200.png" alt="logo" />
+          <p class="footer__copyright">
+            Copyright &copy; 2021 SG MONEY LENDER. All Rights Reserved. Licence
+            No. XX/2021
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of footer -->
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
